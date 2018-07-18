@@ -1,4 +1,4 @@
 version: "3"
-  services:
-    myimage:
-      image: hello-world
+services:
+  myimage:
+    image: hello-world

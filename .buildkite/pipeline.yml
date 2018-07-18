@@ -1,9 +1,6 @@
 steps:
-  - label: ':hammer: testing docker pull'
-    command: 'docker pull library/hello-world'
-
-  # - name: ':heavy_check_mark: Validate'
-  #   plugins:
-  #     docker-compose:
-  #       pull: myimage
-  #       run: myimage
+  - name: ':heavy_check_mark: Validate'
+    plugins:
+      docker-compose:
+        pull: myimage
+        run: myimage

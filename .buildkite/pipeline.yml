@@ -1,3 +1,10 @@
 steps:
   - label: Example Test
     command: echo "command is fixed"
+
+  - name: test plugin
+      command: echo " testing plugin"
+      plugin:
+        docker-compose
+          pull: test
+          run: test

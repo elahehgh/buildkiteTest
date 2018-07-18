@@ -1,6 +1,6 @@
 steps:
-  -label: 'test docker pull'
-    -command: "docker pull library/hello-world"
+  - label: 'test docker pull'
+      command: "docker pull library/hello-world"
 
   # - name: ':heavy_check_mark: Validate'
   #   plugins:

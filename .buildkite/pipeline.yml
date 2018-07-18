@@ -3,4 +3,5 @@ steps:
   - name: ':heavy_check_mark: Validate'
     plugins:
       docker-compose:
-        pull: validate
+        pull: myimage
+        run: myimage

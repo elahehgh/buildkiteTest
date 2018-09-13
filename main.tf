@@ -1,12 +1,13 @@
 terraform {
   backend "s3" {
     key    = "terraform/test"
-    region = "ap-southeast-1"
+    region = "us-east-1"
   }
 }
 
 provider "aws" {
-  region = "ap-southeast-1"
+  region = "us-east-1"
+  alias = "sydney"
 
 }
 

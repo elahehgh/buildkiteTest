@@ -1,5 +1,10 @@
 steps:
-  - name: ':heavy_check_mark: Validate'
+  - name: :allthethings: Running test script
+   command : ./scripts/test.sh
+
+  - block: :thinking_face: Do you want to continue
+
+  - name: ':docker: pulling image'
     plugins:
       docker-compose:
         pull: myimage

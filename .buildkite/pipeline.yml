@@ -3,6 +3,10 @@ steps:
     command :
      - "./scripts/test.sh"
 
+   - name: ':aws: run aws command'
+     command:
+      - "./script/aws.sh"
+
   - block: ':thinking_face: Do you want to continue'
 
   - name: ':docker: pulling image'

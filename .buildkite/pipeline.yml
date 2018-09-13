@@ -1,8 +1,8 @@
 steps:
-  - name: :allthethings: Running test script
+  - name: ':allthethings: Running test script'
    command : ./scripts/test.sh
 
-  - block: :thinking_face: Do you want to continue
+  - block: ':thinking_face: Do you want to continue'
 
   - name: ':docker: pulling image'
     plugins:

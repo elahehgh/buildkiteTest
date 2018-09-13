@@ -1,6 +1,7 @@
 steps:
   - name: ':allthethings: Running test script'
-   command : ./scripts/test.sh
+    command :
+     - "./scripts/test.sh"
 
   - block: ':thinking_face: Do you want to continue'
 

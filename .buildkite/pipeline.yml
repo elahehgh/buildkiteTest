@@ -3,6 +3,10 @@ steps:
     command:
      - "./scripts/test.sh"
 
+  - name: ':terraform: run terraform'
+    command:
+     - "./scripts/apply.sh"
+
   - name: ':aws: run aws command'
     command:
      - "./scripts/aws.sh"

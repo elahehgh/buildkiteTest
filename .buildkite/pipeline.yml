@@ -5,7 +5,7 @@ steps:
 
   - name: ':aws: run aws command'
     command:
-     - "./script/aws.sh"
+     - "./scripts/aws.sh"
 
   - block: ':thinking_face: Do you want to continue'
 

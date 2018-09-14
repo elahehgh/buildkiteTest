@@ -1,4 +1,4 @@
-steps:
+#steps:
 #  - name: ':allthethings: Running test script'
 #    command:
 #     - "./scripts/test.sh"
@@ -28,6 +28,10 @@ steps:
 #     - "./scripts/aws.sh"
 #
 #  - block: ':thinking_face: Do you want to continue'
+steps:
+  - name: ":clown: clown detector"
+    plugins:
+      detect-clowns#v2.0.0: ~
 
   - name: ':buildkite: plugin'
     plugins:

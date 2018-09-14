@@ -1,36 +1,38 @@
 steps:
-  - name: ':allthethings: Running test script'
-    command:
-     - "./scripts/test.sh"
-
-  - name: ':terraform: :clipboard: plan'
-    branches: "master"
-    plugins:
-      docker-compose:
-        pull: plan
-        run: plan
-      artifacts#v1.1.0:
-        upload: tfplan-test
-
-  - wait
-
-  - name: ":terraform: :rocket: apply!"
-    branches: "master"
-    plugins:
-      docker-compose:
-        pull: apply
-        run: apply
-      artifacts#v1.1.0:
-        download: tfplan-test
-
-  - name: ':aws: run aws command'
-    command:
-     - "./scripts/aws.sh"
-
-  - block: ':thinking_face: Do you want to continue'
+#  - name: ':allthethings: Running test script'
+#    command:
+#     - "./scripts/test.sh"
+#
+#  - name: ':terraform: :clipboard: plan'
+#    branches: "master"
+#    plugins:
+#      docker-compose:
+#        pull: plan
+#        run: plan
+#      artifacts#v1.1.0:
+#        upload: tfplan-test
+#
+#  - wait
+#
+#  - name: ":terraform: :rocket: apply!"
+#    branches: "master"
+#    plugins:
+#      docker-compose:
+#        pull: apply
+#        run: apply
+#      artifacts#v1.1.0:
+#        download: tfplan-test
+#
+#  - name: ':aws: run aws command'
+#    command:
+#     - "./scripts/aws.sh"
+#
+#  - block: ':thinking_face: Do you want to continue'
 
   - name: ':docker: pulling image'
     plugins:
+      https://github.com/elahehgh/test-buildkite-plugin.git:
+        bucket: "bla-bla"
       docker-compose:
         pull: myimage
         run: myimage

@@ -29,10 +29,13 @@ steps:
 #
 #  - block: ':thinking_face: Do you want to continue'
 
+  - name: ':buildkite: plugin'
+    plugins:
+      elahehgh/test-buildkite-plugin:
+        bucket: "bla-bla"
+
   - name: ':docker: pulling image'
     plugins:
-      https://github.com/elahehgh/test-buildkite-plugin.git:
-        bucket: "bla-bla"
       docker-compose:
         pull: myimage
         run: myimage

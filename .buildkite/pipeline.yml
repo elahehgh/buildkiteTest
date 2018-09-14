@@ -36,7 +36,6 @@ steps:
   - name: ':buildkite: plugin'
     plugins:
       https://github.com/elahehgh/test-buildkite-plugin.git:
-        bucket: "bla-bla"
 
   - name: ':docker: pulling image'
     plugins:

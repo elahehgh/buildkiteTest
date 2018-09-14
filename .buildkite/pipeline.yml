@@ -3,7 +3,7 @@ steps:
     command:
      - "./scripts/test.sh"
 
- - name: ':terraform: :clipboard: plan'
+  - name: ':terraform: :clipboard: plan'
     branches: "master"
     plugins:
       docker-compose:
@@ -12,7 +12,7 @@ steps:
       artifacts#v1.1.0:
         upload: tfplan-test
 
- - wait
+  - wait
 
   - name: ":terraform: :rocket: apply!"
     branches: "master"

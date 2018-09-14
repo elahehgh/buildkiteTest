@@ -7,7 +7,6 @@ terraform {
 
 provider "aws" {
   region = "ap-southeast-2"
-  alias = "sydney"
 }
 
 resource "aws_s3_bucket" "test" {

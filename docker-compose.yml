@@ -9,6 +9,7 @@ services:
       - AWS_SECRET_ACCESS_KEY
     volumes:
       - .:/workdir
+      - /usr/local/var/buildkite-agent/builds/:/usr/local/var/buildkite-agent/builds/
     working_dir: /workdir
     entrypoint: sh
     command: -c "scripts/plan.sh"

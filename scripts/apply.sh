@@ -6,4 +6,4 @@ echo "+++ :terraform: Terraform Init"
 terraform init \
     -backend-config="bucket=terraform-tfstate-elaheh"
 echo "+++ :terraform: Terraform Apply"
-terraform apply
+terraform apply -auto-approve

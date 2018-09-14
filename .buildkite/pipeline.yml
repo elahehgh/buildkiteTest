@@ -5,6 +5,10 @@ steps:
 
   - name: ':terraform: run terraform'
     command:
+     - "./scripts/plan.sh"
+
+  - name: ':terraform: run terraform'
+    command:
      - "./scripts/apply.sh"
 
   - name: ':aws: run aws command'

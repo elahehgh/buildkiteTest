@@ -10,5 +10,5 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "test" {
-  bucket = "elaheh_test_bucket"
+  bucket = "elaheh-test-bucket"
 }

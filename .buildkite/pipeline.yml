@@ -3,13 +3,25 @@ steps:
     command:
      - "./scripts/test.sh"
 
-  - name: ':terraform: run terraform'
-    command:
-     - "./scripts/plan.sh"
+ - name: ':terraform: :clipboard: plan'
+    branches: "master"
+    plugins:
+      docker-compose:
+        pull: plan
+        run: plan
+      artifacts#v1.1.0:
+        upload: tfplan-test
 
-  - name: ':terraform: run terraform'
-    command:
-     - "./scripts/apply.sh"
+ - wait
+
+  - name: ":terraform: :rocket: apply!"
+    branches: "master"
+    plugins:
+      docker-compose:
+        pull: apply
+        run: apply
+      artifacts#v1.1.0:
+        download: tfplan-test
 
   - name: ':aws: run aws command'
     command:

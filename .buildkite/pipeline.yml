@@ -29,16 +29,10 @@
 #
 #  - block: ':thinking_face: Do you want to continue'
 steps:
-  - name: ":clown: clown detector"
-    plugins:
-      detect-clowns#v2.0.0: ~
-
-  - name: ':buildkite: plugin'
-    plugins:
-      https://github.com/elahehgh/test-buildkite-plugin.git:
 
   - name: ':docker: pulling image'
     plugins:
+      https://github.com/elahehgh/test-buildkite-plugin.git:
       docker-compose:
         pull: myimage
         run: myimage

@@ -33,6 +33,7 @@ steps:
   - name: ':docker: pulling image'
     plugins:
       https://github.com/elahehgh/test-buildkite-plugin.git:
+        bucket: elaheh-test-bucket-for-plugin
       docker-compose:
         pull: myimage
         run: myimage
